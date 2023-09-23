@@ -1,10 +1,16 @@
 #include <iostream>
 
-#include "lib.h"
+#include "check_is_good_date.h"
 
 using namespace std;
 
 int main() {
-    cout << "Bruh: " << endl
-         << A() << endl;
+    char dayOfWeek[11];
+    int verifiedNumber;
+    std::cin >> dayOfWeek;
+    std::cin >> verifiedNumber;
+    
+    cout << checkIsGoodDate(dayOfWeek, verifiedNumber);
+    
+    return 0;
 }
