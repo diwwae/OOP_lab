@@ -5,12 +5,12 @@
 using namespace std;
 
 int main() {
-    char dayOfWeek[11];
+    string dayOfWeek;
     int verifiedNumber;
-    std::cin >> dayOfWeek;
-    std::cin >> verifiedNumber;
+    cin >> dayOfWeek;
+    cin >> verifiedNumber;
     
-    cout << checkIsGoodDate(dayOfWeek, verifiedNumber);
+    cout << checkIsGoodDate(dayOfWeek, verifiedNumber) << endl;
     
     return 0;
 }
