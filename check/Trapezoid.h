@@ -12,6 +12,7 @@ public:
     // void setPeaks(Vector<Point>) override;
 
     double calculateSquare();
+    // Point calculateCenter() override;
     static Trapezoid &createFromPoints(std::vector<Point>);
 
     ~Trapezoid() = default;
