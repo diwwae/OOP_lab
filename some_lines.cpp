@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "ConditionValidator.h"
+// #include "ConditionValidator.h"
 #include <cmath>
 #include <cctype>
 #include <sstream>
@@ -17,8 +17,8 @@ class Hex {
         Hex(const std::string &str) {
             _digits.reserve(str.size());
             for (int64_t i = str.size() - 1; i >= 0; --i) {
-                CheckCondition((str[i] > 70 || str[i] < 48) && (str[i] > 102 || str[i] < 97),
-                     "String contains invalid argument");
+                // CheckCondition((str[i] > 70 || str[i] < 48) && (str[i] > 102 || str[i] < 97),
+                //      "String contains invalid argument");
                 _digits.push_back(str[i]);
             }
         }
@@ -132,6 +132,11 @@ int main(){
     // hex_number._digits = {'1','2','3'};
     std::cout << decimal.toHex(10).toString() << std::endl;
     // Hex res1 = decimal.toHex(10);
+    std::cout << "fffffffffffffffffffffffffff" << std::endl;
+    std::vector<unsigned char> vec = {'1', '4'};
+    Hex hex = Hex(vec);
+    hex.print();
+    std::cout << "fffffffffffffffffffffffffff" << std::endl;
 
     std::cout << "..........................." << std::endl;
     Hex result_sum = hex_one + hex_two;
