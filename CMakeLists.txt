@@ -1,10 +1,12 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.13)
 project(lab0)
 
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+#set(CMAKE_CXX_STANDARD 20)
+#set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_compile_options(-g -rdynamic)
+#add_compile_options(-g)
+
+set(GOOGLETEST_VERSION 1.14.0)
 
 add_subdirectory(lib/googletest)
 
@@ -31,3 +33,5 @@ add_executable(${CMAKE_PROJECT_NAME}_test ${TEST_SOURCES})
 target_include_directories(${CMAKE_PROJECT_NAME}_test PRIVATE ${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 
 target_link_libraries(${CMAKE_PROJECT_NAME}_test PRIVATE ${CMAKE_PROJECT_NAME}_lib gtest gtest_main)
+
+
