@@ -32,6 +32,9 @@ namespace labWork {
 			using other = Allocator<U>;
 		};
 
+		template<class U>
+		Allocator(const Allocator<U> &other){}
+
 		Allocator() {
 			allocatorMemory = malloc(sizeof(T) * BLOCKS_COUNT);
 
