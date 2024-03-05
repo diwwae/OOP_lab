@@ -1,0 +1,4 @@
+elf
+Victor
+x: 424; y: 184
+alive
